@@ -17,5 +17,5 @@
 
 
 # extracting matrix
-time python /usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/03_interaction_decay.py 10000 two dump/OB_10K/all_reenter_merge_control_10000.addChr.xls dump/OB_10K/all_reenter_degron_10000.addChr.xls  
+time python ./03_interaction_decay.py 10000 two dump/OB_10K/file1.xls dump/OB_10K/file2.xls
 
