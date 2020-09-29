@@ -5,8 +5,8 @@ import os
 
 ## Utilize Dump from https://github.com/aidenlab/juicer/wiki/Data-Extraction
 
-juicertools="java -Djava.awt.headless=true -Xmx32000m -jar /usr/users/szhang3/Juicer/scripts/juicer_tools_1.13.02.jar dump"
-scriptpath="/usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/scripts/addChr2dump.py"
+juicertools="java -Djava.awt.headless=true -Xmx32000m -jar juicer_tools_1.13.02.jar dump"
+scriptpath="./scripts/addChr2dump.py"
 method=sys.argv[1]## <observed/oe> <norm/expected> <loops/domains>
 normalization=sys.argv[2]## <NONE/VC/VC_SQRT/KR>
 hicfile=sys.argv[3]##hic file
