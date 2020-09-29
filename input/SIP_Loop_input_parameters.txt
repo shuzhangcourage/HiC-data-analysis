@@ -1,12 +1,1 @@
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_control_merge/inter_30.hic control_25K_fdr005 25000 800 2 0.05 3 3
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_control_merge/inter_30.hic control_25K_fdr001 25000 800 2 0.01 3 3
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_control_merge/inter_30.hic control_10K_fdr005 10000 2000 2 0.05 3 4
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_control_merge/inter_30.hic control_10K_fdr001 10000 2000 2 0.01 3 4
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_control_merge/inter_30.hic control_5K_fdr005 5000 4000 2 0.05 6 6
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_control_merge/inter_30.hic control_5K_fdr001 5000 4000 2 0.01 6 6
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_degron_merge/inter_30.hic degron_25K_fdr005 25000 800 2 0.05 3 3
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_degron_merge/inter_30.hic degron_25K_fdr001 25000 800 2 0.01 3 3
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_degron_merge/inter_30.hic degron_10K_fdr005 10000 2000 2 0.05 3 4
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_degron_merge/inter_30.hic degron_10K_fdr001 10000 2000 2 0.01 3 4
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_degron_merge/inter_30.hic degron_5K_fdr005 5000 4000 2 0.05 6 6
-#/usr/users/szhang3/Project/TOP2A2B/Data/01_AKI84_A006850084/TOP2A2B_degron_merge/inter_30.hic degron_5K_fdr001 5000 4000 2 0.01 6 6
+inter_30.hic control 25000 800 2 0.05 3 3
