@@ -17,8 +17,8 @@
 # scancel 5349837
 
 # Input
-inputFileName="/usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/input/Dump_input_parameters.txt"
+inputFileName="./input/Dump_input_parameters.txt"
 parameters=`sed "${SLURM_ARRAY_TASK_ID}q;d" $inputFileName`
 
 # extracting matrix
-time python /usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/01_dump.py $parameters
+time python ./01_dump.py $parameters
