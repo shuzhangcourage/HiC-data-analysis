@@ -3,7 +3,7 @@
 import sys
 import os
 
-scripts="/usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/scripts/"
+scripts="./scripts/"
 binsize=sys.argv[1]
 Type=sys.argv[2]
 command="mkdir -p Interaction_decay"
