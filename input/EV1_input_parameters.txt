@@ -1,0 +1,7 @@
+KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/mergecontrolG1/inter_30.hic BP 250000 EV1_250K reenter_merge_control
+KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/Shu_control/inter_30.hic BP 250000 EV1_250K 14hG1_control
+KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/Shu_Degron/inter_30.hic BP 250000 EV1_250K 14hG1_degron
+KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/Tri_degron/inter_30.hic BP 250000 EV1_250K 14hG1_Tri
+KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/4_redegron/merge_old_new_degron/inter_30.hic BP 250000 EV1_250K reenter_degron
+KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/2_AKI67_A006850034/hg38/Auxin/inter_30.hic BP 250000 EV1_250K 2h_async_degron
+KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/2_AKI67_A006850034/hg38/Control/inter_30.hic BP 250000 EV1_250K 2h_async_control
