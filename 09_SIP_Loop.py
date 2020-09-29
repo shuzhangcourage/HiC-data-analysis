@@ -3,9 +3,9 @@
 import sys
 import os
 
-SIP=" /usr/users/szhang3/Juicer/scripts/SIP_HiC.jar "
-genome=" /usr/users/szhang3/Juicer/references/chrom.sizes.hg38.filter "
-juicertools=" /usr/users/szhang3/Juicer/scripts/juicer_tools_1.13.02.jar "
+SIP="SIP_HiC.jar "
+genome="chrom.sizes.hg38.filter "
+juicertools="juicer_tools_1.13.02.jar "
 
 hicfile=sys.argv[1] ##hic file
 output=sys.argv[2] #name of output
