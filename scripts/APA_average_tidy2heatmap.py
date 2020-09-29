@@ -3,7 +3,7 @@ import sys
 
 APA=open(sys.argv[1])
 output=open(sys.argv[2],"w")
-maxi="20.62638367139376"
+maxi=sys.argv[3]
 def tidy():
 	list_APA=[]
 	w=(maxi+'\t')+("NA"+"\t")*15+maxi+"\n"
