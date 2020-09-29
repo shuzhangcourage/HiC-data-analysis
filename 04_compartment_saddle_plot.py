@@ -3,9 +3,9 @@
 import sys
 import os
 
-Script="/usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/scripts/"
-EV1="/usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/EV1/EV1_250K/"
-dump="/usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/dump/OE_250K/"
+Script="./scripts/"
+EV1="./EV1/EV1_250K/"
+dump="./dump/OE_250K/"
 name=sys.argv[1]# name of sample
 reference=sys.argv[2]# if reference
 binsize="250000" # default
