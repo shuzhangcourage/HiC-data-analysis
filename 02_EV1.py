@@ -5,9 +5,9 @@ import os
 
 #juicer_tools eigenvector -p <NONE/VC/VC_SQRT/KR> <hicFile(s)> <chr> <BP/FRAG> <binsize> [outfile]
 
-juicertools="java -Djava.awt.headless=true -Xmx32000m -jar /usr/users/szhang3/Juicer/scripts/juicer_tools_1.13.02.jar eigenvector -p"
-scriptpath="/usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/scripts/compAorB.py"
-genedensity="/usr/users/szhang3/Juicer/compartment_genedensity_250K/"
+juicertools="java -Djava.awt.headless=true -Xmx32000m -jar juicer_tools_1.13.02.jar eigenvector -p"
+scriptpath="./scripts/compAorB.py"
+genedensity="compartment_genedensity_250K/"
 normalization=sys.argv[1]## <NONE/VC/VC_SQRT/KR>
 hicfile=sys.argv[2]##hic file
 delimited=sys.argv[3]##<BP/FRAG>
