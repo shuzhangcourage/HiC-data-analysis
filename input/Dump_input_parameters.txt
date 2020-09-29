@@ -1,14 +1,2 @@
-oe KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/mergecontrolG1/inter_30.hic BP 250000 OE_250K reenter_merge_control 
-oe KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/Shu_control/inter_30.hic BP 250000 OE_250K 14hG1_control
-oe KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/Shu_Degron/inter_30.hic BP 250000 OE_250K 14hG1_degron
-oe KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/Tri_degron/inter_30.hic BP 250000 OE_250K 14hG1_Tri
-oe KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/4_redegron/merge_old_new_degron/inter_30.hic BP 250000 OE_250K reenter_degron
-oe KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/2_AKI67_A006850034/hg38/Auxin/inter_30.hic BP 250000 OE_250K 2h_async_degron
-oe KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/2_AKI67_A006850034/hg38/Control/inter_30.hic BP 250000 OE_250K 2h_async_control
-observed KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/mergecontrolG1/inter_30.hic BP 10000 OB_10K reenter_merge_control
-observed KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/Shu_control/inter_30.hic BP 10000 OB_10K 14hG1_control
-observed KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/Shu_Degron/inter_30.hic BP 10000 OB_10K 14hG1_degron
-observed KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/3_AKI72_A006200065/hg38/Tri_degron/inter_30.hic BP 10000 OB_10K 14hG1_Tri
-observed KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/4_redegron/merge_old_new_degron/inter_30.hic BP 10000 OB_10K reenter_degron
-observed KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/2_AKI67_A006850034/hg38/Auxin/inter_30.hic BP 10000 OB_10K 2h_async_degron
-observed KR /usr/users/szhang3/Project/Papantonis_Pol2Degron/Data/2_AKI67_A006850034/hg38/Control/inter_30.hic BP 10000 OB_10K 2h_async_control
+oe KR inter_30.hic BP 250000 OE_250K control 
+observed KR inter_30.hic BP 10000 OB_10K control
