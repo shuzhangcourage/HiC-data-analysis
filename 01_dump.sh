@@ -9,16 +9,10 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=50gb
 #SBATCH --time=1:00:00
-#SBATCH --array=1-14
+#SBATCH --array=1-2
 
-# Commands
-# sbatch 01_dump.sh
-# squeue -u szhang3
-# scancel 5349837
 
-# Input
 inputFileName="./input/Dump_input_parameters.txt"
 parameters=`sed "${SLURM_ARRAY_TASK_ID}q;d" $inputFileName`
 
-# extracting matrix
 time python ./01_dump.py $parameters
