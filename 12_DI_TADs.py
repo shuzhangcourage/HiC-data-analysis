@@ -3,9 +3,9 @@
 import sys
 import os
 
-genomesize="/usr/users/szhang3/Juicer/references/chrom.sizes.hg38.filter" 
-scripts="/usr/users/szhang3/Project/Papantonis_Pol2Degron/Code/3_Annotation_pipline/scripts/"
-centromere="/usr/users/szhang3/Juicer/references/hg38_centro_telemere_selected"
+genomesize="chrom.sizes.hg38.filter" 
+scripts="./scripts/"
+centromere="hg38_centro_telemere_selected"
 dump=sys.argv[1]#path of dump_value
 name=sys.argv[2]#name of samples
 binsize=sys.argv[3]#binsize
