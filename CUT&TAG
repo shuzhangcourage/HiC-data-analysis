@@ -1,0 +1,49 @@
+Related commands
+CUT&TAG peak calling
+for example CTCF peak calling 
+##First (using a multi-FDR way)
+
+bash SEACR_1.3.sh bowtie2.fragments.normalized.bedgraph 0.01 non stringent top0.01.peaks
+bash SEACR_1.3.sh bowtie2.fragments.normalized.bedgraph 0.025 non stringent top0.025.peaks
+bash SEACR_1.3.sh bowtie2.fragments.normalized.bedgraph 0.05 non stringent top0.05.peaks
+bash SEACR_1.3.sh bowtie2.fragments.normalized.bedgraph 0.1 non stringent top0.1.peaks
+bash SEACR_1.3.sh bowtie2.fragments.normalized.bedgraph 0.5 non stringent top0.5.peaks
+
+##Second checking results by generating heatmap and peak-counting plots
+bamCoverage -b <.bam> -o <.bw> --normalizeUsing <CPM>; #generating bigwig file
+#generating heatmap
+computeMatrix reference-point -S <.bw> -R <.bed> --skipZeros --missingDataAsZero -o <.mat.gz> -p <20> -a <3000> -b <3000> --referencePoint <center>; 
+plotHeatmap -m <.mat.gz> -o <.mat.gz.png> --sortUsing <sum> --startLabel <"Peak Start"> --endLabel <"Peak End"> --xAxisLabel <""> --yAxisLabel <""> --regionsLabel <CTCF> --samplesLabel <CTCF_ctrl>; 
+#couting reads using cut&tag peaks
+bedtools multicov -bams <.bam> -bed <.bed> | grep -v "chrM" | awk '{print $1,$2,$3,$11,$14}' OFS="\t" > <peaks.counts>
+#generating fasta file to do CTCF motif searching 
+bedtools getfasta -fi <hg38.fa> -bed <.bed> -fo <CTCF.peaks.bed.fa>; 
+fimo --motif <CTCF_HUMAN.H11MO.0.A> --motif -o <CTCF_fimo_out> <HOCOMOCOv11_full_HUMAN_mono_meme_format.meme> <CTCF.peaks.bed.fa>; 
+
+##Third, selecting suitable FDR(Done!)
+
+##The core code to annotate promoter and enhancers using H3K27ac peaks:
+library(ChIPseeker)
+library(TxDb.Hsapiens.UCSC.hg38.knownGene)
+library(clusterProfiler)
+library(annotate)
+library(dplyr)
+txdb <- TxDb.Hsapiens.UCSC.hg38.knownGene
+samplefiles <- list.files("<path of folder>", pattern= "<name>", full.names=T)
+samplefiles <- as.list(samplefiles)
+names(samplefiles) <- c("H3K27ac")
+peakAnnoList <- lapply(samplefiles, annotatePeak, TxDb=txdb, tssRegion=c(-1000, 1000), verbose=FALSE)
+plotAnnoPie(peakAnnoList[["H3K27ac"]])
+H3K27ac_annot <- as.data.frame(peakAnnoList[["H3K27ac"]]@anno) write.table(H3K27ac_annot, "<outname>", append=FALSE, sep="\t", dec=".", row.names= FALSE, col.names=TRUE)
+dev.off()
+
+###The script to handle differential peaks analysis (https://yezhengstat.github.io/CUTTag_tutorial/#VIII_Differential_analysis).
+The core code is:
+selectR = which(rowSums(countMat) > 5) ## remove low count genes
+dataS = countMat[selectR,]
+condition = factor(rep(histL, each = length(repL)))
+dds = DESeqDataSetFromMatrix(countData = dataS, colData = DataFrame(condition), design = ~ condition)
+DDS = DESeq(dds)
+normDDS = counts(DDS, normalized = TRUE) ## normalization with respect to the sequencing depth
+colnames(normDDS) = paste0(colnames(normDDS), "_norm")
+res = results(DDS, independentFiltering = FALSE, altHypothesis = "greaterAbs") countMatDiff = cbind(dataS, normDDS, res)
